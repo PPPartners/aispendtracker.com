@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When finishing tasks from the developmentPlan, only always finish one item in the list never multiple. 
+Always ask if we should continue with the next task in the end.
+Always check off finished tasks from the developmentPlan.
+
+When I ask you to fix a specific bug, only fix this but don't do other things in the same file at that time!
