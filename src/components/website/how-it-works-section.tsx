@@ -264,10 +264,7 @@ const OptimizeContent = () => (
 
 export default function HowItWorksSection() {
   return (
-    <section
-      id="how-it-works"
-      className="w-full py-12 md:py-24 lg:py-32 bg-zinc-50 dark:bg-zinc-900"
-    >
+    <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="inline-block rounded-lg bg-zinc-100 px-3 py-1 text-sm dark:bg-zinc-800">

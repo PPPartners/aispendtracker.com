@@ -4,7 +4,7 @@ import WaitlistForm from "./waitlist-form"; // Import the reusable form
 
 export default function HeroSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 md:pb-16 lg:pb-20 bg-black text-white">
+    <section className="w-full py-12 md:py-24 lg:py-32 md:pb-16 lg:pb-20  text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4 ">
