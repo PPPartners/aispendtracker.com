@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client"; // Mark as Client Component
+
+import WaitlistForm from "./waitlist-form"; // Import the reusable form
 
 export default function HeroSection() {
   return (
@@ -21,27 +22,8 @@ export default function HeroSection() {
               How much did you spend on AI last month? If you had to guess, you
               need this tool. One dashboard. Total visibility.
             </p>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
-              <div className="flex w-full max-w-lg items-center space-x-2">
-                <input
-                  type="email"
-                  placeholder="you@example.com"
-                  className="flex-1 rounded-md border border-zinc-700 bg-zinc-900 p-3 text-sm text-white placeholder:text-zinc-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-                />
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="bg-emerald-500 hover:bg-emerald-600 shrink-0"
-                >
-                  Get Early Access <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-            <div className="flex items-start gap-4 text-sm text-zinc-400">
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 ">
-                No spam. We&apos;ll only reach out once you are in or when
-                it&apos;s live.
-              </p>
+            <div className="mt-6">
+              <WaitlistForm className="max-w-lg" />
             </div>
           </div>
           <div className="flex items-center justify-center">

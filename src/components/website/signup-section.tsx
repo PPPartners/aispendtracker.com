@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button";
+"use client"; // Mark as Client Component
+
+import WaitlistForm from "./waitlist-form"; // Import the reusable form
 
 export default function SignUpSection() {
   return (
@@ -19,26 +21,7 @@ export default function SignUpSection() {
           </p>
         </div>
 
-        <div className="max-w-[600px] mx-auto flex flex-col items-center space-y-4">
-          <div className="w-full flex flex-col sm:flex-row items-center gap-2">
-            <label htmlFor="email-signup" className="sr-only">
-              Email
-            </label>
-            <input
-              id="email-signup"
-              type="email"
-              placeholder="you@example.com"
-              className="flex-grow w-full sm:w-auto rounded-md border border-zinc-800 bg-zinc-900 p-2 text-sm text-white placeholder:text-zinc-400"
-            />
-            <Button className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600">
-              Join Waitlist
-            </Button>
-          </div>
-          <p className="text-xs text-zinc-500">
-            No spam. We&apos;ll only reach out once you are in or when it&apos;s
-            live.
-          </p>
-        </div>
+        <WaitlistForm className="mx-auto" />
       </div>
     </section>
   );
