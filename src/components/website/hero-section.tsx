@@ -23,7 +23,7 @@ export default function HeroSection() {
               need this tool. One dashboard. Total visibility.
             </p>
             <div className="mt-6">
-              <WaitlistForm className="max-w-lg mx-auto" />
+              <WaitlistForm className="max-w-lg mx-auto" location="hero" />
             </div>
           </div>
           {/* Hide this column on mobile/tablet, show on lg+ */}

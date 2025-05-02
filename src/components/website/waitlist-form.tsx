@@ -5,22 +5,32 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Loader2 } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 
 interface WaitlistFormProps {
   className?: string; // Allow passing additional classes
+  location: "hero" | "signup"; // Add location prop
 }
 
-export default function WaitlistForm({ className }: WaitlistFormProps) {
+export default function WaitlistForm({
+  className,
+  location,
+}: WaitlistFormProps) {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const posthog = usePostHog();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
     setIsSuccess(false);
     setErrorMessage(null);
+
+    if (posthog) {
+      posthog.capture("cta_clicked", { location });
+    }
 
     if (!email) {
       setErrorMessage("Please enter your email address.");
@@ -40,6 +50,9 @@ export default function WaitlistForm({ className }: WaitlistFormProps) {
       if (response.ok || response.status === 303 || response.redirected) {
         setIsSuccess(true);
         setEmail("");
+        if (posthog) {
+          posthog.capture("waitlist_signup");
+        }
       } else {
         let errorMsg = "An error occurred. Please try again.";
         try {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/form"; // Assuming you might have/want this from Shadcn for structure
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Loader2 } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 
 // --- Constants for options ---
 const PROVIDERS = [
@@ -119,6 +120,13 @@ export default function WaitlistSurveyForm({
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const posthog = usePostHog();
+
+  useEffect(() => {
+    if (posthog) {
+      posthog.capture("survey_started");
+    }
+  }, [posthog]);
 
   // Log received entryId prop
   console.log("[Survey Form] Received entryId prop:", entryId);
@@ -185,49 +193,31 @@ export default function WaitlistSurveyForm({
     setIsSuccess(false);
     setErrorMessage(null);
 
-    const intermediateData = { ...data };
+    console.log(
+      "[Survey Form] Submitting data:",
+      JSON.stringify(data, null, 2)
+    );
 
-    if (intermediateData.provider_other) {
-      intermediateData.used_providers = [
-        ...(intermediateData.used_providers || []),
-        `Other: ${intermediateData.provider_other}`,
-      ];
-    }
-    const { tracking_other, ...restData } = intermediateData;
-
-    let finalTrackingMethod = restData.tracking_method;
-    if (tracking_other) {
-      finalTrackingMethod = `Other: ${tracking_other}`;
-    }
-
-    const finalPayload: SurveyApiPayload = {
+    const apiPayload: SurveyApiPayload = {
       entryId,
-      used_providers:
-        restData.used_providers && restData.used_providers.length > 0
-          ? restData.used_providers
+      building_description: data.building_description || null,
+      used_providers: data.provider_other
+        ? [...(data.used_providers || []), `Other: ${data.provider_other}`]
+        : data.used_providers?.length
+          ? data.used_providers
           : null,
-      tracking_method: finalTrackingMethod === "" ? null : finalTrackingMethod,
-      building_description:
-        restData.building_description === ""
-          ? null
-          : restData.building_description,
-      billing_frustration:
-        restData.billing_frustration === ""
-          ? null
-          : restData.billing_frustration,
-      team_size: restData.team_size === "" ? null : restData.team_size,
-      reasonable_price:
-        restData.reasonable_price === "" ? null : restData.reasonable_price,
-      feedback_call_interest:
-        restData.feedback_call_interest === ""
-          ? null
-          : restData.feedback_call_interest,
+      tracking_method: data.tracking_other
+        ? `Other: ${data.tracking_other}`
+        : data.tracking_method || null,
+      billing_frustration: data.billing_frustration || null,
+      team_size: data.team_size || null,
+      reasonable_price: data.reasonable_price || null,
+      feedback_call_interest: data.feedback_call_interest || null,
     };
 
-    // Log the payload before sending
     console.log(
-      "[Survey Form] Submitting payload:",
-      JSON.stringify(finalPayload, null, 2)
+      "[Survey Form] API Payload:",
+      JSON.stringify(apiPayload, null, 2)
     );
 
     try {
@@ -236,11 +226,16 @@ export default function WaitlistSurveyForm({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(finalPayload),
+        body: JSON.stringify(apiPayload),
       });
 
-      if (!response.ok) {
-        let errorMsg = "Submission failed. Please try again.";
+      if (response.ok) {
+        setIsSuccess(true);
+        if (posthog) {
+          posthog.capture("survey_completed");
+        }
+      } else {
+        let errorMsg = "An error occurred while submitting the survey.";
         try {
           const errorData = await response.json();
           errorMsg = errorData.error || errorMsg;
@@ -249,7 +244,6 @@ export default function WaitlistSurveyForm({
         }
         throw new Error(errorMsg);
       }
-      setIsSuccess(true);
     } catch (error) {
       console.error("Survey submission error:", error);
       const message =

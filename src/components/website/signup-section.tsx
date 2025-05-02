@@ -18,7 +18,7 @@ export default function SignUpSection() {
           </p>
         </div>
 
-        <WaitlistForm className="mx-auto" />
+        <WaitlistForm className="mx-auto" location="signup" />
       </div>
     </section>
   );
