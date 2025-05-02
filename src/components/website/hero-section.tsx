@@ -4,29 +4,30 @@ import WaitlistForm from "./waitlist-form"; // Import the reusable form
 
 export default function HeroSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
+    <section className="w-full py-12 md:py-24 lg:py-32 md:pb-16 lg:pb-20 bg-black text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="flex flex-col justify-center space-y-4">
-            <div className="inline-block rounded-lg bg-zinc-800 px-3 py-1 text-sm">
+          <div className="flex flex-col justify-center space-y-4 ">
+            <div className="inline-block rounded-lg bg-zinc-800 px-3 py-1 text-sm mx-auto lg:mx-0">
               Now accepting sign-ups to get{" "}
               <span className="font-semibold text-emerald-500">
                 Early Access
               </span>{" "}
             </div>
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-center lg:text-left">
               AI is Eating the World{" "}
               <span className="text-emerald-500">And Your Budget</span>
             </h1>
-            <p className="max-w-[600px] text-zinc-400 md:text-xl">
+            <p className="max-w-[600px] text-zinc-400 text-lg text-center lg:text-left mx-auto">
               How much did you spend on AI last month? If you had to guess, you
               need this tool. One dashboard. Total visibility.
             </p>
             <div className="mt-6">
-              <WaitlistForm className="max-w-lg" />
+              <WaitlistForm className="max-w-lg mx-auto" />
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          {/* Hide this column on mobile/tablet, show on lg+ */}
+          <div className="hidden lg:flex items-center justify-center">
             <div className="relative w-full max-w-[600px] overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 p-2 shadow-xl">
               <div className="flex items-center gap-2 border-b border-zinc-800 p-2">
                 <div className="h-3 w-3 rounded-full bg-red-500" />

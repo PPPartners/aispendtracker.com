@@ -62,7 +62,7 @@ export default function WaitlistForm({ className }: WaitlistFormProps) {
     <div className={`w-full max-w-md space-y-4 ${className}`}>
       {!isSuccess ? (
         <form onSubmit={handleSubmit} className="w-full space-y-4">
-          <div className="flex flex-col sm:flex-row items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <label htmlFor="email-waitlist" className="sr-only">
               Email
             </label>
