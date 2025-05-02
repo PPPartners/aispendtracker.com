@@ -146,3 +146,149 @@ Auto-classify by vendor and allow manual overrides or custom project tags.
 #### Component 6.2: Manual Overrides & Tags (Next.js)
 
 - [ ] Task 6.2.1: In the Dashboard table, add controls to edit `category` and assign `project`
+- [ ] Task 6.2.1: In the Dashboard table, add controls to edit `category` and assign `project` tags.
+- [ ] Task 6.2.2: Call Supabase RPC or update API route to persist changes in `charges` and `charge_tags`.
+
+---
+
+## Feature 7: Dashboard & Visualization
+
+### Description
+
+Build the core dashboard with summary tiles and interactive charts.
+
+### Components
+
+#### Component 7.1: Summary Tiles (Next.js)
+
+- [ ] Task 7.1.1: Create a page at `/dashboard` with tiles for:
+  - Total spend this month
+  - Total spend last month
+  - MoM % change
+- [ ] Task 7.1.2: Fetch data via Supabase RPC functions or REST endpoints (e.g. `/api/metrics/summary`).
+
+#### Component 7.2: Charts (Next.js)
+
+- [ ] Task 7.2.1: Integrate `react-chartjs-2` line chart for spend over time.
+- [ ] Task 7.2.2: Bar/pie chart for spend by vendor or project.
+- [ ] Task 7.2.3: Add date-range selector component.
+
+#### Component 7.3: Backend Metrics (Edge Functions or RPC)
+
+- [ ] Task 7.3.1: Implement RPC `get_summary_metrics()`.
+- [ ] Task 7.3.2: RPC `get_spend_over_time(range_days)`.
+- [ ] Task 7.3.3: RPC `get_spend_by_vendor(range_days)` and `get_spend_by_project(range_days)`.
+
+---
+
+## Feature 8: Budgeting & Alerts
+
+### Description
+
+Allow users to set budgets and receive notifications at thresholds.
+
+### Components
+
+#### Component 8.1: Budget Management (Next.js + Supabase)
+
+- [ ] Task 8.1.1: UI in `/settings/budgets` to create/edit budgets.
+- [ ] Task 8.1.2: Persist budgets in `budgets` table via Supabase client.
+
+#### Component 8.2: Alerting (Scheduled Edge Function)
+
+- [ ] Task 8.2.1: Create Edge Function `check-budgets` to run daily via Scheduled Trigger.
+- [ ] Task 8.2.2: Compare spend against 75%/100% thresholds.
+- [ ] Task 8.2.3: Insert records into a `notifications` table and send email via SendGrid (or similar).
+- [ ] Task 8.2.4: Build `/notifications` UI to display in-app alerts.
+
+---
+
+## Feature 9: Data Export & API
+
+### Description
+
+Provide CSV export and read-only JSON API for programmatic access.
+
+### Components
+
+#### Component 9.1: CSV Export (Next.js API)
+
+- [ ] Task 9.1.1: API route `/api/exports/charges.csv` to stream CSV.
+- [ ] Task 9.1.2: "Export CSV" button in `/settings` to download.
+
+#### Component 9.2: Read-Only JSON API
+
+- [ ] Task 9.2.1: API route `/api/charges` and `/api/metrics` protected by Supabase Service Role Key or API token.
+- [ ] Task 9.2.2: UI to generate/revoke API tokens in settings.
+
+---
+
+## Feature 10: Security, Monitoring & Compliance
+
+### Description
+
+Harden security, add logging/monitoring, ensure basic compliance.
+
+### Components
+
+#### Component 10.1: Security
+
+- [ ] Task 10.1.1: Enforce HTTPS (Vercel config).
+- [ ] Task 10.1.2: Rate-limit API routes using Vercel Edge Middleware.
+- [ ] Task 10.1.3: Review RLS policies and RPC definitions for least privilege.
+
+#### Component 10.2: Monitoring & Logging
+
+- [ ] Task 10.2.1: Integrate Sentry for frontend/Edge Function error tracking.
+- [ ] Task 10.2.2: Set up Supabase Logs review in project dashboard.
+- [ ] Task 10.2.3: Configure uptime checks on `/api/health` (Vercel/UptimeRobot).
+
+#### Component 10.3: Compliance
+
+- [ ] Task 10.3.1: Implement `/api/user/delete` to purge user data.
+- [ ] Task 10.3.2: Add GDPR-style consent checkbox during signup.
+
+---
+
+## Feature 11: Testing, Deployment & Launch
+
+### Description
+
+Finalize tests, deploy to staging/production, onboard pilot users.
+
+### Components
+
+#### Component 11.1: Testing
+
+- [ ] Task 11.1.1: Write unit tests for Edge Functions (Vitest).
+- [ ] Task 11.1.2: Write integration tests for RPCs (pgTAP or similar).
+- [ ] Task 11.1.3: E2E tests for key UI flows (Playwright).
+
+#### Component 11.2: Deployment
+
+- [ ] Task 11.2.1: Configure Vercel for Next.js deployments (staging & production).
+- [ ] Task 11.2.2: Configure Supabase CLI for migrations in CI.
+- [ ] Task 11.2.3: Deploy to staging, run smoke tests.
+- [ ] Task 11.2.4: Promote to production on go-live.
+
+#### Component 11.3: Pilot Launch
+
+- [ ] Task 11.3.1: Invite 5–10 solo builders to pilot.
+- [ ] Task 11.3.2: Collect feedback via Typeform or in-app survey.
+- [ ] Task 11.3.3: Triage and prioritize fixes/UX improvements.
+
+---
+
+## Feature 13: Post-MVP Planning
+
+### Description
+
+Outline next-phase enhancements based on pilot feedback.
+
+### Components
+
+#### Component 13.1: Roadmap Draft
+
+- [ ] Task 13.1.1: Analyze usage metrics and feedback.
+- [ ] Task 13.1.2: Prioritize v2 features: multi-user teams, advanced analytics, mobile app.
+- [ ] Task 13.1.3: Draft timeline and resource estimates.
