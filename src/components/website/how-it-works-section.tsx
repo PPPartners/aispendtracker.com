@@ -13,11 +13,11 @@ export default function HowItWorksSection() {
             <span className="font-semibold">How It Works</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-            Setup in Minutes, Not Days
+            From Setup to Spend Visibility in Under 5 Minutes
           </h2>
           <p className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-            Get started with just a few clicks and see your AI spend data
-            instantly.
+            Connect your tools. See where your money’s going. Avoid nasty
+            billing surprises.
           </p>
         </div>
         <div className="mx-auto max-w-5xl py-12">
@@ -30,71 +30,23 @@ export default function HowItWorksSection() {
             <TabsContent value="connect" className="mt-6 space-y-4">
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">
-                    Connect Your AI Services
-                  </h3>
+                  <h3 className="text-2xl font-bold">Connect Your AI Tools</h3>
                   <p className="text-zinc-500 dark:text-zinc-400">
-                    Simply provide read-only API keys for services like OpenAI,
-                    Anthropic, and others. For services without direct API
-                    access, upload CSV or JSON exports.
+                    Skip spreadsheets and manual inputs. Just plug in your API
+                    keys, and we&apos;ll fetch and organize your billing data
+                    automatically.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Secure, read-only connections</span>
+                      <span>🔒 Read-only, secure connections</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Auto-detection of billing data</span>
+                      <span>🧠 Auto-detects usage and costs</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Support for all major AI providers</span>
+                      <span>
+                        🌐 Supports OpenAI, Anthropic, and all major providers
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -137,70 +89,24 @@ export default function HowItWorksSection() {
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="flex flex-col justify-center space-y-4">
                   <h3 className="text-2xl font-bold">
-                    Visualize Your Spending
+                    See Where Every Dollar Is Going
                   </h3>
                   <p className="text-zinc-500 dark:text-zinc-400">
-                    Once connected, your data is automatically processed and
-                    displayed in intuitive charts and graphs. See spending
-                    trends, breakdowns by service, and more.
+                    No more guessing. Once connected, your data becomes a clear
+                    story: spend trends, usage spikes, and project-level
+                    breakdowns, all in one place.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Interactive dashboards</span>
+                      <span>📅 Track usage over time</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Historical trend analysis</span>
+                      <span>🧩 Break down spend by provider or feature</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Customizable views and filters</span>
+                      <span>
+                        🖥️ Dashboards you&apos;ll actually want to check
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -306,68 +212,24 @@ export default function HowItWorksSection() {
             <TabsContent value="optimize" className="mt-6 space-y-4">
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">Optimize Your AI Spend</h3>
+                  <h3 className="text-2xl font-bold">
+                    Spend Smarter, Stay in Control
+                  </h3>
                   <p className="text-zinc-500 dark:text-zinc-400">
                     Set budgets, receive alerts, and make data-driven decisions
                     to optimize your AI spending and prevent unexpected costs.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Set monthly or project-based budgets</span>
+                      <span>⏰ Get alerted before budgets blow up</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Receive alerts when approaching limits</span>
+                      <span>🎯 Assign limits by project or team</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <div className="rounded-full bg-emerald-500 p-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-white"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <span>Identify cost-saving opportunities</span>
+                      <span>
+                        📉 Uncover high-cost services and trim the fat
+                      </span>
                     </li>
                   </ul>
                 </div>

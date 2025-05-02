@@ -6,7 +6,7 @@ import HeroSection from "@/components/website/hero-section";
 import FeaturesSection from "@/components/website/features-section";
 import HowItWorksSection from "@/components/website/how-it-works-section";
 //import PricingSection from "@/components/website/pricing-section";
-import FaqSection from "@/components/website/faq-section";
+//import FaqSection from "@/components/website/faq-section";
 import SignUpSection from "@/components/website/signup-section";
 
 export default function Home() {
@@ -43,13 +43,12 @@ export default function Home() {
             >
               Pricing
             </Link>
-            */}
             <Link
               href="#faq"
               className="text-sm font-medium hover:underline underline-offset-4"
             >
               FAQ
-            </Link>
+            </Link>*/}
           </nav>
           <div className="flex items-center gap-4">
             <Link href="#signup">
@@ -62,8 +61,8 @@ export default function Home() {
         <HeroSection />
         <FeaturesSection />
         <HowItWorksSection />
-        {/* <PricingSection /> */}
-        <FaqSection />
+        {/* <PricingSection /> 
+        <FaqSection />*/}
         <SignUpSection />
       </main>
       <footer className="w-full border-t bg-zinc-100 py-6 dark:bg-zinc-900">

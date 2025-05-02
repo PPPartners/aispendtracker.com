@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowRight, Lock, Zap, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
@@ -9,50 +8,40 @@ export default function HeroSection() {
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
             <div className="inline-block rounded-lg bg-zinc-800 px-3 py-1 text-sm">
-              <span className="font-semibold text-emerald-500">Beta</span> Now
-              accepting early access sign-ups
+              Now accepting sign-ups to get{" "}
+              <span className="font-semibold text-emerald-500">
+                Early Access
+              </span>{" "}
             </div>
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-              Track Your AI Spend{" "}
-              <span className="text-emerald-500">Without The Chaos</span>
+              AI is Eating the World{" "}
+              <span className="text-emerald-500">And Your Budget</span>
             </h1>
             <p className="max-w-[600px] text-zinc-400 md:text-xl">
-              One dashboard for all your AI API and SaaS expenses. Connect
-              billing feeds, upload invoices, and get instant clarity on where
-              your money is going.
+              How much did you spend on AI last month? If you had to guess, you
+              need this tool. One dashboard. Total visibility.
             </p>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="#signup">
+            <div className="flex flex-col gap-2 min-[400px]:flex-row mt-6">
+              <div className="flex w-full max-w-lg items-center space-x-2">
+                <input
+                  type="email"
+                  placeholder="you@example.com"
+                  className="flex-1 rounded-md border border-zinc-700 bg-zinc-900 p-3 text-sm text-white placeholder:text-zinc-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                />
                 <Button
+                  type="submit"
                   size="lg"
-                  className="bg-emerald-500 hover:bg-emerald-600"
+                  className="bg-emerald-500 hover:bg-emerald-600 shrink-0"
                 >
                   Get Early Access <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-              </Link>
-              <Link href="#how-it-works">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-zinc-700 text-white hover:bg-zinc-800"
-                >
-                  See How It Works
-                </Button>
-              </Link>
+              </div>
             </div>
-            <div className="flex items-center gap-4 text-sm text-zinc-400">
-              <div className="flex items-center gap-1">
-                <Lock className="h-3 w-3" />
-                <span>Secure Connections</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Zap className="h-3 w-3" />
-                <span>Setup in Minutes</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Github className="h-3 w-3" />
-                <span>Built for Developers</span>
-              </div>
+            <div className="flex items-start gap-4 text-sm text-zinc-400">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 ">
+                No spam. We&apos;ll only reach out once you are in or when
+                it&apos;s live.
+              </p>
             </div>
           </div>
           <div className="flex items-center justify-center">

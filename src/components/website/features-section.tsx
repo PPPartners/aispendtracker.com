@@ -22,41 +22,32 @@ export default function FeaturesSection() {
             <span className="font-semibold">Features</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-            Everything You Need to Track AI Spend
+            Stop Wondering Where Your Money Went
           </h2>
           <p className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-            Built for developers and founders who need clarity on their AI costs
-            without the spreadsheet headaches.
+            Built for AI builders who are sick of digging through billing
+            portals, guessing their burn, and dreading end-of-month surprises.
           </p>
         </div>
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
           <Card>
             <CardHeader>
               <Database className="h-10 w-10 text-emerald-500" />
-              <CardTitle className="mt-4">API Integrations</CardTitle>
+              <CardTitle className="mt-4">Smart API Integrations</CardTitle>
               <CardDescription>
-                Direct connections to OpenAI, Anthropic, Google AI, and more. No
-                manual data entry required.
+                Connect OpenAI, Anthropic, and more in seconds. No scraping or
+                manual entry: just connect and go.
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
-            <CardHeader>
-              <FileText className="h-10 w-10 text-emerald-500" />
-              <CardTitle className="mt-4">CSV/JSON Upload</CardTitle>
-              <CardDescription>
-                Easily import data from any provider not directly supported with
-                our smart parser.
-              </CardDescription>
-            </CardHeader>
-          </Card>
+
           <Card>
             <CardHeader>
               <BarChart3 className="h-10 w-10 text-emerald-500" />
-              <CardTitle className="mt-4">Visual Dashboard</CardTitle>
+              <CardTitle className="mt-4">Visual Spend Dashboard</CardTitle>
               <CardDescription>
-                Interactive charts and graphs to visualize your spend by tool,
-                project, or time period.
+                One glance = total clarity. Interactive graphs and breakdowns by
+                tool, project, and time. Designed for speed and sanity.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -65,8 +56,8 @@ export default function FeaturesSection() {
               <Bell className="h-10 w-10 text-emerald-500" />
               <CardTitle className="mt-4">Budget Alerts</CardTitle>
               <CardDescription>
-                Set monthly or per-project budgets and get notified when
-                you&apos;re approaching your limits.
+                Catch costs before they snowball. Set caps by month or by
+                project and get notified before your card gets hit.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -75,18 +66,28 @@ export default function FeaturesSection() {
               <LineChart className="h-10 w-10 text-emerald-500" />
               <CardTitle className="mt-4">Spend Forecasting</CardTitle>
               <CardDescription>
-                Predict your end-of-month costs based on current usage patterns
-                and historical data.
+                Know your burn before it burns you. See projected end-of-month
+                spend based on current usage trends.
               </CardDescription>
             </CardHeader>
           </Card>
           <Card>
             <CardHeader>
               <CreditCard className="h-10 w-10 text-emerald-500" />
-              <CardTitle className="mt-4">Cost Breakdown</CardTitle>
+              <CardTitle className="mt-4">Deep Cost Attribution</CardTitle>
               <CardDescription>
-                See exactly which models and features are driving your costs
-                with detailed breakdowns.
+                Which model? Which feature? Which project? Break spend down by
+                model type, usage tier, or internal tag.
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <FileText className="h-10 w-10 text-emerald-500" />
+              <CardTitle className="mt-4">Weekly Spend Report</CardTitle>
+              <CardDescription>
+                A simple summary, delivered to your inbox. Track your burn
+                without logging in. Opt out anytime.
               </CardDescription>
             </CardHeader>
           </Card>
