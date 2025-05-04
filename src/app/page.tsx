@@ -8,6 +8,7 @@ import HowItWorksSection from "@/components/website/how-it-works-section";
 //import PricingSection from "@/components/website/pricing-section";
 //import FaqSection from "@/components/website/faq-section";
 import SignUpSection from "@/components/website/signup-section";
+import LogoScroller from "@/components/website/logo-scroller";
 
 export default function Home() {
   return (
@@ -60,8 +61,9 @@ export default function Home() {
       </header>
       <main className="flex-1 w-full max-w-screen-xl mx-auto">
         <HeroSection />
-        <FeaturesSection />
+        <LogoScroller />
         <HowItWorksSection />
+        <FeaturesSection />
         {/* <PricingSection /> 
         <FaqSection />*/}
         <SignUpSection />
