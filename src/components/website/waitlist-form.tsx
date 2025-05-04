@@ -82,29 +82,28 @@ export default function WaitlistForm({
             <Input
               id="email-waitlist" // Use a generic ID
               type="email"
-              placeholder="you@example.com"
+              placeholder="you@startup.com — Join now!"
               value={email}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setEmail(e.target.value)
               }
               disabled={isLoading}
               required
-              className="flex-grow w-full sm:w-auto rounded-md border border-zinc-800 bg-zinc-900 text-sm text-white placeholder:text-zinc-400 focus-visible:ring-emerald-500"
+              className="flex-grow w-full sm:w-auto rounded-md border border-zinc-700 bg-zinc-900 text-sm text-white placeholder:text-zinc-400 focus-visible:ring-emerald-500"
             />
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 disabled:opacity-50"
+              className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 disabled:opacity-50 shadow-[0_0_15px_2px_rgba(16,185,129,0.5)] hover:shadow-[0_0_20px_5px_rgba(16,185,129,0.6)] transition-shadow duration-300"
             >
               {isLoading ? (
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               ) : null}
-              {isLoading ? "Joining..." : "Join Waitlist"}
+              {isLoading ? "Joining..." : "Get Early Access"}
             </Button>
           </div>
           <p className="text-xs text-zinc-500 text-center">
-            No spam. We&apos;ll only reach out once you are in or when it&apos;s
-            live.
+            We&apos;ll email you as soon as you&apos;re in — no spam.
           </p>
         </form>
       ) : null}
