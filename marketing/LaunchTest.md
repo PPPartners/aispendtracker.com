@@ -10,7 +10,7 @@
 
 - [x] 2.1 Ensure PostHog or GA is running
 - [x] 2.2 Set up events for signup clicks and page visits
-- [ ] 2.3 Create UTM templates for different channels
+- [x] 2.3 Create UTM templates for different channels
 
 ## [ ] 3 Clarify Positioning
 
@@ -19,18 +19,12 @@
 
 ## [ ] 4 Join Target Communities
 
-- [ ] 4.1 Reddit: r/startups, r/indiehackers, r/machinelearning
+- [x] 4.1 Reddit: r/startups, r/indiehackers, r/machinelearning
 - [ ] 4.2 Indie Hackers
-- [ ] 4.3 AI/startup Discords
-- [ ] 4.4 Read the rules for each — note promotion guidelines
+- [x] 4.3 AI/startup Discords
+- [x] 4.4 Read the rules for each — note promotion guidelines
 
-## [ ] 5 Soft Teaser on Social Media
-
-- [ ] 5.1 Post on X (Twitter): teaser with personal voice
-- [ ] 5.2 Post on LinkedIn: story about problem you're solving
-- [ ] 5.3 No links — just signal intent and build anticipation
-
-## [ ] 6 Set Up Paid Campaigns (Optional)
+## [ ] 5 Set Up Paid Campaigns (Optional)
 
 - [ ] 6.1 Create Reddit Ads campaign targeting AI/ML interests
 - [ ] 6.2 Write 1–2 ad copy versions

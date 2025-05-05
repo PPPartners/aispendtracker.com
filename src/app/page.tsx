@@ -17,7 +17,7 @@ export default function Home() {
         <div className="container mx-auto flex h-16 items-center justify-between max-w-screen-lg">
           <div className="flex items-center gap-2">
             <Image
-              src="/aispendtracker-logo-white-tb.png"
+              src="/logo-aispendtracker-green.png"
               alt="AI Spend Tracker Logo"
               width={150}
               height={32}
@@ -72,7 +72,7 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row max-w-screen-xl mx-auto">
           <div className="flex items-center gap-2 pl-4">
             <Image
-              src="/aispendtracker-logo-white-tb.png"
+              src="/logo-aispendtracker-green.png"
               alt="AI Spend Tracker Logo"
               width={150}
               height={32}
