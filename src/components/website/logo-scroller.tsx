@@ -45,7 +45,7 @@ export default function LogoScroller() {
     <section className="w-full py-8 md:py-16 lg:py-8 text-white">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-8 md:mb-12">
-          You&apos;re Paying for 10+ AI Tools. Can You Name Them?
+          You&apos;re Paying for 10+ AI Tools. Can You Name Them All?
         </h2>
         <div className="relative w-full overflow-hidden">
           <div className="flex animate-scroll whitespace-nowrap">
